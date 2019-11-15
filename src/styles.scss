@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,bold&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,bold&display=swap');
 
 // adding some fonts and getting rid of pesky margin/padding
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  color: white;
+  background-color: #363636;
 }
 
 // make auto-generated p's look a bit like a header!

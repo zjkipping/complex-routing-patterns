@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "complex-routing-patterns": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "complex-routing-patterns"
+    }
+  },
+  "defaultProject": "complex-routing-patterns",
+  "cli": {
+    "analytics": "00c008a5-1bf2-4f35-8784-d3d2d74df87c"
+  }
 }
