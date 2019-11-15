@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,bold&display=swap");
+
+// adding some fonts and getting rid of pesky margin/padding
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+// make auto-generated p's look a bit like a header!
+p {
+  font-size: 18px;
+  margin: 20px 0px;
+  font-weight: bold;
+}
+
+// defining the nav bounds + giving it some snazzy colors
+nav {
+  width: 100%;
+  height: 60px;
+  font-size: 22px;
+  display: flex;
+  color: white;
+  background-color: #316ec4;
+  border-bottom: 2px solid #244e88;
+
+  // getting rid of ul's bullet points and defining the bounds
+  ul {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+
+    // what would an li be without some borders?
+    li {
+      border-right: 2px solid #244e88;
+
+      // making our anchor tags look all pretty and feel like navigation buttons
+      a {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0px 20px;
+        color: inherit;
+        background-color: inherit;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        outline: 0;
+        -webkit-tap-highlight-color: transparent;
+        white-space: nowrap;
+        text-decoration: none;
+      }
+    }
+
+    // who doesn't like some good hover functionality?
+    li:hover {
+      background-color: #3b7fdf;
+    }
+  }
+}
+
+// giving some spacing to our main sections
+section {
+  padding: 20px;
+
+  // floating navs look weird without borders!
+  nav {
+    border: 2px solid #244e88;
+  }
+}
+
+// give the buttons/anchor buttons some bare bones prettification
+button,
+a.button {
+  margin: 10px;
+  height: 40px;
+  background-color: #3b7fdf;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+// some nice background overrides
+button.cancel,
+a.cancel {
+  background-color: rgb(226, 81, 81);
+}
+
+button.submit,
+a.submit {
+  background-color: rgb(57, 158, 57);
+}
+
+// let our selected navigation buttons differentiate themselves!
+.selected {
+  background-color: #7eaff3;
+  color: #295899;
+}
+
+.selected:hover {
+  background-color: #89b0e7;
+}
