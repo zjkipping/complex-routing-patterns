@@ -1,1 +1,14 @@
-<p>task-form works!</p>
+<form [formGroup]="taskForm" (ngSubmit)="submit()">
+  <div>
+    <label for="name">Name</label>
+    <input id="name" formControlName="name">
+  </div>
+  <div>
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description"></textarea>
+    </div>
+  <div>
+    <a class="button cancel" routerLink="../../">Cancel</a>
+    <button class="submit">Submit</button>
+  </div>
+</form>

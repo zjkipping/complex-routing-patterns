@@ -1,1 +1,11 @@
-<p>task-list works!</p>
+<section>
+  <a class="button" routerLink="create">Create New Task</a>
+  <header>
+    <span>Name</span>
+    <span>Description</span>
+  </header>
+  <a *ngFor="let task of tasks | async" routerLink="{{task.id}}/edit">
+    <span>{{task.name}}</span>
+    <span>{{task.description}}</span>
+  </a>
+</section>

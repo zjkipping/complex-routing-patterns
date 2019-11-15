@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
-    path: 'employees',
-    loadChildren: () =>
-      import('./employees/employees.module').then(m => m.EmployeesModule)
+    path: `employees`,
+    loadChildren: () => import('./employees/employees.module').then(m => m.EmployeesModule)
   },
   {
     path: 'home',
@@ -20,7 +19,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      paramsInheritanceStrategy: 'always',
+      preloadingStrategy: PreloadAllModules
+    })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

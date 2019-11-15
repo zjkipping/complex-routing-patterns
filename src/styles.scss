@@ -16,6 +16,57 @@ p {
   font-weight: bold;
 }
 
+// allow for external links (not router links) to look like normal anchor tags
+a.external {
+  font-size: 30px;
+  color: white;
+}
+
+// remove normal anchor tag styles from non-external links (router links)
+a :not(.external) {
+  padding: 0px 20px;
+  color: inherit;
+  background-color: inherit;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+// createsa tab system
+div.tabs {
+  display: grid;
+  grid-auto-flow: column;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 5px 20px;
+    background-color: #316ec4;
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid #244e88;
+    text-align: center;
+  }
+
+  a.active {
+    background-color: #3ab7e9;
+  }
+
+  a:first-child {
+    border-left: 0px;
+  }
+
+  a:last-child {
+    border-right: 0px;
+  }
+}
+
 // defining the nav bounds + giving it some snazzy colors
 nav {
   width: 100%;
@@ -125,4 +176,29 @@ a.submit {
 
 .selected:hover {
   background-color: #89b0e7;
+}
+
+// make labels that are "for" an input
+label {
+  display: block;
+}
+
+label[for] {
+  margin-bottom: 7px;
+  font-size: 15px;
+}
+
+// clean styles for inputs/text area in form
+input,
+textarea {
+  background-color: #5a5a5a;
+  border: 1px solid #8f8f8f;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
 }

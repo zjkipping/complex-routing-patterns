@@ -1,0 +1,39 @@
+section {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+
+  a.button {
+    width: 100%;
+    text-align: center;
+  }
+
+  header,
+  a:not(.button) {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    border-bottom: 2px solid #316ec4;
+    padding: 10px;
+
+    span {
+      font-size: 22px;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:not(.button):hover {
+    background-color: #636363;
+  }
+}
