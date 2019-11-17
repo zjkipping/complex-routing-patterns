@@ -8,7 +8,12 @@
       <textarea id="description" formControlName="description"></textarea>
     </div>
   <div>
-    <a class="button cancel" routerLink="../../">Cancel</a>
+    <a
+      class="button cancel"
+      [routerLink]="'/employees/' + (employeeId || '') + '/tasks'"
+    >
+      Cancel
+    </a>
     <button class="submit">Submit</button>
   </div>
 </form>

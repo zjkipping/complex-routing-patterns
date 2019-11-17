@@ -42,6 +42,8 @@ export class TaskFormComponent implements OnInit {
       )
       .toPromise();
 
+    console.log(this.employeeId, taskId);
+
     if (this.employeeId && taskId) {
       this.task = await this.tms
         .getTask(this.employeeId, taskId)
@@ -61,11 +63,10 @@ export class TaskFormComponent implements OnInit {
           ...this.task,
           ...this.taskForm.value
         });
-        return this.router.navigate(['../../'], { relativeTo: this.route });
       } else {
         await this.tms.createTask(this.employeeId, this.taskForm.value);
-        return this.router.navigate(['../'], { relativeTo: this.route });
       }
+      this.router.navigate(['employees', this.employeeId, 'tasks']);
     }
   }
 }
